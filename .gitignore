@@ -1,0 +1,7 @@
+*.zip
+package.*.yaml
+lib/
+node_modules/
+.env
+.DS_Store
+/.idea/
