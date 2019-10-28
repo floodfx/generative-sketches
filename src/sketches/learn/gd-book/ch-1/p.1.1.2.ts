@@ -2,7 +2,7 @@ import p5 from "p5";
 
 // Generative Design P.1.1.2
 function sketch(p: p5) {
-  const segmentCount = 30;
+  let segmentCount = 30;
   const radius = 200;
 
   p.setup = () => {
@@ -25,6 +25,26 @@ function sketch(p: p5) {
       p.fill(angle, p.mouseX, p.mouseY);
     }
     p.endShape();
+  };
+
+  p.keyReleased = () => {
+    switch (p.key) {
+      case "1":
+        segmentCount = 360;
+        break;
+      case "2":
+        segmentCount = 45;
+        break;
+      case "3":
+        segmentCount = 24;
+        break;
+      case "4":
+        segmentCount = 12;
+        break;
+      case "5":
+        segmentCount = 6;
+        break;
+    }
   };
 }
 
