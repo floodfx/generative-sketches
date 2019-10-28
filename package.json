@@ -8,21 +8,21 @@
     "build": "tsc",
     "test": "./node_modules/.bin/jest",
     "format": "./node_modules/.bin/prettier --write '**/*.[tj]s'",
-    "sketch": "canvas-sketch"
+    "sketch": "canvas-sketch",
+    "parcel": "parcel"
   },
   "author": "github@floodfx.com",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
-    "canvas": "^2.6.0",
-    "canvas-sketch-cli": "^1.11.6",
+    "@types/p5": "^0.9.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^5.0.1",
-    "tsify": "^4.0.1",
     "typescript": "^3.6.4"
   },
   "husky": {
@@ -31,6 +31,6 @@
     }
   },
   "dependencies": {
-    "canvas-sketch": "^0.7.1"
+    "p5": "^0.10.2"
   }
 }
