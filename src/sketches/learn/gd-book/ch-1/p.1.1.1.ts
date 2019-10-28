@@ -1,6 +1,6 @@
 import p5 from "p5";
 
-// Generative Design P.1.0
+// Generative Design P.1.1.1
 function sketch(p: p5) {
   let stepX: number, stepY: number;
   const y = 100;
