@@ -22,7 +22,7 @@ function sketch(p: p5) {
         p.rect(gridX, gridY, stepX, stepY);
       }
     }
-  }
+  };
 }
 
 new p5(sketch);
