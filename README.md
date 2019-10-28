@@ -2,4 +2,4 @@
 
 ## Commands
 
- * `npm run sketch -- path/to/file.js --open`
+ * `npm run parcel -- path/to/file`
