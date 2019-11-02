@@ -14,6 +14,7 @@
   "author": "github@floodfx.com",
   "license": "ISC",
   "devDependencies": {
+    "@types/chroma-js": "^1.4.3",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "@types/p5": "^0.9.0",
@@ -31,6 +32,7 @@
     }
   },
   "dependencies": {
+    "chroma-js": "^2.0.6",
     "p5": "^0.10.2"
   }
 }
