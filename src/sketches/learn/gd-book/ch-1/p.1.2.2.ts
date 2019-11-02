@@ -2,18 +2,14 @@ import p5, { COLOR_MODE } from "p5";
 import { sortColors, HsbgSortMode } from "../../../utils/color";
 var image = require("./subway.jpg");
 
-
-
 // Generative Design P.1.2.2
 function sketch(p: p5) {
-
   let img: p5.Image;
   let sortMode: HsbgSortMode | undefined;
 
-
   p.setup = () => {
     p.createCanvas(420, 420);
-    img = p.loadImage(image)
+    img = p.loadImage(image);
   };
 
   p.draw = () => {
@@ -47,9 +43,8 @@ function sketch(p: p5) {
       }
     }
     // show the sortMode
-    p.fill('black');
-    p.text(`sortMode: ${sortMode || 'none'}`, 0, 0, 100, 100);
-
+    p.fill("black");
+    p.text(`sortMode: ${sortMode || "none"}`, 0, 0, 100, 100);
   };
 
   // switch between color modes
@@ -59,16 +54,16 @@ function sketch(p: p5) {
         sortMode = undefined;
         break;
       case "5":
-        sortMode = "hue"
+        sortMode = "hue";
         break;
       case "6":
-        sortMode = "saturation"
+        sortMode = "saturation";
         break;
       case "7":
-        sortMode = "brightness"
+        sortMode = "brightness";
         break;
       case "8":
-        sortMode = "grayscale"
+        sortMode = "grayscale";
         break;
     }
   };
