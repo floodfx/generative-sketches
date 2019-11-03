@@ -38,7 +38,7 @@ function sketch(p: p5) {
     }
   };
 
-  // switch between color modes
+  // switch between color generation
   p.keyReleased = () => {
     switch (p.key) {
       case "1":
