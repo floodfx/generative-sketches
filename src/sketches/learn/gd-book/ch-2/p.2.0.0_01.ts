@@ -18,7 +18,7 @@ function sketch(p: p5) {
 
     // calc lines
     let circleRes = p.map(p.mouseY, 0, p.height, 2, 80);
-    let radius = p.mouseX - p.width / 2 + 0.5
+    let radius = p.mouseX - p.width / 2 + 0.5;
     let angle = p.TWO_PI / circleRes;
 
     p.strokeWeight(p.mouseY / 20);
