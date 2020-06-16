@@ -1,18 +1,18 @@
 // see https://generativeartistry.com/tutorials/piet-mondrian/
 
-var canvas = document.querySelector('canvas')!;
-var context = canvas.getContext('2d')!;
+var canvas = document.querySelector("canvas")!;
+var context = canvas.getContext("2d")!;
 
-var size = 640;//window.innerWidth;
-var dpr = 1//window.devicePixelRatio;
-canvas.width = 640//size * dpr;
-canvas.height = 640//size * dpr;
+var size = 640; //window.innerWidth;
+var dpr = 1; //window.devicePixelRatio;
+canvas.width = 640; //size * dpr;
+canvas.height = 640; //size * dpr;
 context.lineWidth = 8;
 var step = size / 20;
 var squaresToColor = size / 10;
 
-var white = '#F2F5F1';
-var colors = ['#D40920', '#1356A2', '#F7D842']
+var white = "#F2F5F1";
+var colors = ["#D40920", "#1356A2", "#F7D842"];
 
 interface Coordinate {
   x?: number;
@@ -20,19 +20,21 @@ interface Coordinate {
 }
 
 interface PietRect {
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  color?: string
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  color?: string;
 }
 
-let squares: PietRect[] = [{
-  x: 0,
-  y: 0,
-  width: size,
-  height: size
-}];
+let squares: PietRect[] = [
+  {
+    x: 0,
+    y: 0,
+    width: size,
+    height: size,
+  },
+];
 
 function splitSquaresWith(coordinates: Coordinate) {
   // Loops through the squares, and find if
@@ -66,14 +68,14 @@ function splitOnX(square: PietRect, splitAt: number) {
     x: square.x,
     y: square.y,
     width: square.width - (square.width - splitAt + square.x),
-    height: square.height
+    height: square.height,
   };
 
   var squareB = {
     x: splitAt,
     y: square.y,
     width: square.width - splitAt + square.x,
-    height: square.height
+    height: square.height,
   };
 
   squares.push(squareA);
@@ -88,14 +90,14 @@ function splitOnY(square: PietRect, splitAt: number) {
     x: square.x,
     y: square.y,
     width: square.width,
-    height: square.height - (square.height - splitAt + square.y)
+    height: square.height - (square.height - splitAt + square.y),
   };
 
   var squareB = {
     x: square.x,
     y: splitAt,
     width: square.width,
-    height: square.height - splitAt + square.y
+    height: square.height - splitAt + square.y,
   };
 
   squares.push(squareA);
@@ -114,21 +116,15 @@ for (var i = 0; i < squaresToColor; i++) {
 function draw() {
   for (var i = 0; i < squares.length; i++) {
     context.beginPath();
-    context.rect(
-      squares[i].x,
-      squares[i].y,
-      squares[i].width,
-      squares[i].height
-    );
+    context.rect(squares[i].x, squares[i].y, squares[i].width, squares[i].height);
     if (squares[i].color !== undefined) {
       context.fillStyle = squares[i].color!;
     } else {
-      context.fillStyle = white
+      context.fillStyle = white;
     }
-    context.fill()
+    context.fill();
     context.stroke();
   }
 }
 
-draw()
-
+draw();
