@@ -10,21 +10,24 @@ function sketch(p: p5) {
     p.createCanvas(WIDTH, HEIGHT);
     p.colorMode("hsb", 360, 100, 100);
     p.background(0, 0, 100);
-    
+
     p.strokeWeight(1);
-    
-    for(let i = 0; i < 10000; i++) {
-      p.fill(0,0,0,0);
+
+    for (let i = 0; i < 10000; i++) {
+      p.fill(0, 0, 0, 0);
       p.stroke(0, 0, 0, 0.1);
-      p.triangle(p.random(WIDTH), p.random(HEIGHT), p.random(WIDTH), p.random(HEIGHT), p.random(WIDTH), p.random(HEIGHT));
-    } 
+      p.triangle(
+        p.random(WIDTH),
+        p.random(HEIGHT),
+        p.random(WIDTH),
+        p.random(HEIGHT),
+        p.random(WIDTH),
+        p.random(HEIGHT),
+      );
+    }
   };
 
-  p.draw = () => {
-    
-
-  
-  };
+  p.draw = () => {};
 }
 
 new p5(sketch);
