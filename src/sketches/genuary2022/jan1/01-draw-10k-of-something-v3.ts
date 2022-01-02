@@ -12,12 +12,10 @@ function sketch(p: p5) {
     p.background(0, 0, 100);
 
     p.strokeWeight(1);
-    
-    
+
     for (let i = 0; i < 100; i++) {
-      
-      for(let j = 0; j < 100; j++) {
-        let row = j; 
+      for (let j = 0; j < 100; j++) {
+        let row = j;
         p.stroke(0, 0, 0, p.random(0.05, 0.2));
         p.fill(0, 0, 0, p.random(0.05, 0.2));
         p.textStyle(p.BOLD);
@@ -26,9 +24,7 @@ function sketch(p: p5) {
     }
   };
 
-  p.draw = () => {
-    
-  };
+  p.draw = () => {};
 }
 
 new p5(sketch);
