@@ -1,8 +1,8 @@
 import p5 from "p5";
 // https://genuary.art/prompts#jan1
 function sketch(p: p5) {
-  const WIDTH = p.windowWidth;
-  const HEIGHT = p.windowHeight;
+  const WIDTH = 800;
+  const HEIGHT = 800;
   const x = 100;
   const y = 100;
 
