@@ -24,7 +24,6 @@ function sketch(p: p5) {
   const grid: Array<Array<number>> = [];
 
   function generateGridOfAngles() {
-
     for (let col = 0; col < num_columns; col++) {
       grid[col] = [];
       for (let row = 0; row < num_rows; row++) {
@@ -45,11 +44,11 @@ function sketch(p: p5) {
     const step_size = 20;
     p.noFill();
     // p.fill(0, 0, 0, 0.02);
-    p.colorMode(p.RGB)
-    p.strokeWeight(p.round(p.random(5,25)));
+    p.colorMode(p.RGB);
+    p.strokeWeight(p.round(p.random(5, 25)));
     p.strokeCap(p.SQUARE);
     p.stroke(color);
-    
+
     p.beginShape();
     for (let n = 0; n < num_steps; n++) {
       p.vertex(x, y);
@@ -70,7 +69,6 @@ function sketch(p: p5) {
       let y_step = step_size * p.sin(grid_angle);
       x = x + x_step;
       y = y + y_step;
-      
     }
     p.endShape();
   }
@@ -94,19 +92,20 @@ function sketch(p: p5) {
     p.createCanvas(width, height);
     p.background("#FFFBDB");
     p.colorMode("hsb", 360, 100, 100);
-    
 
-    const colors = chroma.scale(["F9D371", "8843F2"]).mode("lch").colors(8);
-    
+    const colors = chroma
+      .scale(["F9D371", "8843F2"])
+      .mode("lch")
+      .colors(8);
 
     // p.noiseSeed(20220104);
     // p.randomSeed(20220104);
     // generate the grid of angles
     generateGridOfAngles();
 
-    // draw curves    
-    for (var i = 0; i < p.round(p.random(100,200)); i++) {
-      drawCurve(p.random(-500, 1500), p.random(-500, 1500), 20, colors[p.round(p.random(0,7))]);
+    // draw curves
+    for (var i = 0; i < p.round(p.random(100, 200)); i++) {
+      drawCurve(p.random(-500, 1500), p.random(-500, 1500), 20, colors[p.round(p.random(0, 7))]);
     }
 
     // p.noiseSeed(202201042);
@@ -114,9 +113,9 @@ function sketch(p: p5) {
 
     generateGridOfAngles();
 
-    // draw curves    
-    for (var i = 0; i < p.round(p.random(100,200)); i++) {
-      drawCurve(p.random(-500, 1500), p.random(-500, 1500), 20, colors[p.round(p.random(0,7))]);
+    // draw curves
+    for (var i = 0; i < p.round(p.random(100, 200)); i++) {
+      drawCurve(p.random(-500, 1500), p.random(-500, 1500), 20, colors[p.round(p.random(0, 7))]);
     }
   };
 
